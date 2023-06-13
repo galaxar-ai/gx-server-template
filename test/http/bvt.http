@@ -1,0 +1,31 @@
+@base = http://localhost:2331
+
+#
+
+### create user
+POST {{base}}/user  HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@localhost",
+    "name": "Test"
+}
+
+### get user list
+GET {{base}}/user  HTTP/1.1
+
+### get user detail
+GET {{base}}/user/2  HTTP/1.1
+
+### update user
+PUT {{base}}/user/2  HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test2@localhost",
+    "name": "Test 2"
+}
+
+### delete user
+DELETE {{base}}/user/2  HTTP/1.1
+
